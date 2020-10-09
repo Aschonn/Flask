@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+
+      <div>
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb4">Add Salesmen</legend>
+                <div>
+                    {{ form.name.label(class='form-class-label') }}
+                    {{ form.name(class='form-control-lg') }}
+                </div>
+                <div>
+                    {{ form.position.label(class='form-class-label') }}
+                    {{ form.position(class='form-control-lg') }}
+                </div>
+                <div>
+                    {{ form.college.label(class='form-class-label') }}
+                    {{ form.college(class='form-control-lg') }}
+                </div>
+                <div>
+                    {{ form.year_id.label(class='form-class-label') }}
+                    {{ form.year_id(class='form-control-lg') }}
+                </div>
+                <div>
+                    {{ form.img.label(class='form-class-label') }}
+                    {{ form.img(class='form-control-lg') }}
+                </div>
+                <div>
+                    {{ form.biography.label(class='form-class-label') }}
+                    {{ form.biography(class='form-control-lg') }}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit(class='btn btn-outline-info') }}
+            </div>
+          </form>
+      </div>
+
+{% endblock %}
+

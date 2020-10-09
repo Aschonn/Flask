@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action="">
+  {{ form.hidden_tag() }}
+  <fieldset class="form-group mx-auto  text-center">
+      <legend class="border-bottom mb4">Mock Draft:</legend>
+      <div class="form-group">
+
+          {{ form.mock.label(class="form-control-label") }}
+          {{ form.mock(class="form-control-label") }}
+          {{ form.submit(class='btn btn-outline-info') }}
+
+      </div>
+  </fieldset>
+
+</form>
+    <!-- display a table of draft picks based on rank -->
+
+    <div>
+      <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name:</th>
+              <th scope="col">Position(1-5):</th>
+              <th scope="col">Height(feet-inches):</th>
+              <th scope="col">College:</th>
+              <th scope="col">Class Of:</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for player in players.items %}
+            <tr>
+              <th scope="row">{{ player.year_rank }}</th>
+              <td>{{ player.name }}</td>
+              <td>{{ player.position }}</td>
+              <td>{{ player.height }}</td>
+              <td>{{ player.college }}</td>
+              <td>{{ player.classof }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+
+  {% for page_num in players.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+    {% if page_num %}
+      {% if players.page == page_num %}
+      <a class='btn btn-info mb-4' href="{{ url_for('mock.select_year', page=page_num) }}">{{page_num}}</a>
+      {% else %}
+      <a class='btn btn-outline-info mb-4' href="{{ url_for('mock.select_year', page=page_num) }}">{{page_num}}</a>
+      {% endif %}
+    {% else %}
+    ...
+    {% endif %}
+{% endfor %}
+{% endblock %}
