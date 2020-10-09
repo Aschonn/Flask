@@ -25,6 +25,18 @@ To compare different frameworks and to see which would give me the best result. 
 
 <br>
 
+# SPECIAL FEATURES:
+- Authentication: Password Hashing, Password Reset, Login
+- Python Instantiated Forms for Adding, Updating, and Deleting Posts
+- Mail
+- Pagination
+- Responsive Design Using Bootstrap
+- Error Handlers and Flash Messages
+- Picture Hexing and Resizing 
+
+
+<br>
+
 # SETUP AND GETTING STARTED:
 
 ## RUNNING IN VIRTUAL ENV:
@@ -91,11 +103,12 @@ Add SECRET_KEY (OPTIONAL):
 3) enter in your own credentials into send_mail.py
 
 
-
+<br>
 <br>
 
 # (MANUALLY) INSERT DATA INTO TABLES:
 
+<br>
 
 ## ADD PLAYERS: (Required: name, year_id, and year_rank)
 
@@ -119,66 +132,27 @@ Add SECRET_KEY (OPTIONAL):
 
 
 
-# SPECIAL FEATURES:
-
-
-## RESIZING IMAGE:
-
-Using PILLOW:
--Speed up website and efficiently store minimial sized photos in database
-
-#PAGINATION
-Using the paginate() method we are able to specify page number
-
-#passwords:
-Hashed 
-
-
-## Blueprints
-In this project we incorporate blueprints which help efficiently scale bigger projects. This is AKA called a application factory at it makes it easier to sift through endpoint and a mutlitude of other things...it makes it easier. It divded the applcation into testing and production aka application factory
-
-
-## configuation
-Add enviromental variables for secrecy and condigured application so it is scalable and easy to change and fix bugs
-
-## error Pages:
-404 --Mostcommon: Page is nonexistant
-403 --Mostcommon: Unathorized (user needs to login)
-500 --Mostcommon: Server Error (Database Problems)
-
-## linode (Linux from scratch)
-1) ssh@ip
-2) update and upgrade
-3) hostname set-hostname draft-server
-4) nano /ect/host
-5) add ip underneath localhost (create connection)
-6) create limited priv user
-7) ssh username@ip and enter you custom password
-
-### More information on Linode Setup: 
-    https://www.youtube.com/watch?v=goToXTC96Co&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=13
-
-setting up:ssh and firewalls
-scp ~/.ssh/id_rsa.pub username@<ip>:~/.ssh/authorized
-
-
-## encrypt:
-- More information: https://letsencrypt.org/getting-started/
 
 <br>
 
-# OPTIONAL:
+# Website Setup
 
-Configure firewall (UFW):
-Configuration:
-sudo ufw default deny incoming (nothing comes in)
-sudo ufw default allow outgoing (we can send stuff out)
-sudo ufw allow ssh (allows ssh)
-sudo ufw allow 5000 (allow for testing)
-scp -r Desktop/flaskdraft username@<ip>
+#### More information on Linode Setup: 
 
-sudo apt install python3-pip
-sudo apt install python3-venv
+<br>
+
+    https://www.youtube.com/watch?v=goToXTC96Co&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=13
+
+#### Encrypt More information:
+
+<br>
+
+
+
+         https://letsencrypt.org/getting-started/
+
+<br>
+
 
 ## FLASKDRAFT TREE:
 
