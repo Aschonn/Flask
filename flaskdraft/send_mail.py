@@ -1,6 +1,8 @@
 import smtplib
+import os
 #allows us to send text and html emails
 from email.mime.text import MIMEText
+from flaskdraft.settings import Config
 
 def send_mail(name, email, comments):
     
@@ -8,10 +10,10 @@ def send_mail(name, email, comments):
     
     port = 2525
     smtp_server = 'smtp.mailtrap.io'
-    login = '91801d061939fc'
-    password = 'cb987337ae8348'
+    login = ADD MAILTRAP_LOGIN
+    password =  ADD MAILTRAP_PASS
     message = f'<h3>New Feedback Submission</h3><ul><li>Name: {name}</li><li>Email: {email}</li><li>Comments: {comments}</li></ul>'
-    sender_email = 'aschonn_trinity@yahoo.com'
+    sender_email = 'sample@yahoo.com'
     receiver_email = 'email2@example.com'
     
     
@@ -34,3 +36,7 @@ def send_mail(name, email, comments):
         server.login(login, password)
         #sends mail
         server.sendmail(sender_email, receiver_email, msg.as_string())
+
+
+    login = '91801d061939fc'
+    password = 'cb987337ae8348'
