@@ -1,27 +1,26 @@
-# NBA BLOG
+# Flask Project
 
-Domain Link: https://www.hpforiginals.com
-
-
-# Motivation:
-Udactiy 5th project: Capstone. We were assigned to either complete a default casting agency, but I decided to make a completely new project with a front-end. 
-
-# Project Depenedencies, local developement, Hosting Instruction, Enviromental Variables
-
-
-## Dependencies:
-
- - I used python 3.8.2 but anything over 3.7 will work.
- - All the related dependencies are in the requirements.txt
+<a href='https://hpforiginals.com'>Flask Project Link</a>
 
 <br>
 
-### NOTABLE SKILLS REQUIRED: 
+# Motivation:
+To compare different frameworks and to see which would give me the best result. I figured the best way to test this out would be to create identical Applications using those both frameworks.
+
+<br>
+
+# Dependencies:
+- I used python 3.8.2 but anything over 3.7 will work.
+- All the related dependencies are in the requirements.txt
+
+<br>
+
+# Required Knowledge:
 - Flask (Framework) 
 - Python (Language)
 - SQLAlchemy (translater)
 - Jinja (HTML helper)
-- Heroku (Cloud Server)
+- Linode (Server)
 - Postgresql (Database)  
 
 <br>
@@ -45,9 +44,9 @@ Udactiy 5th project: Capstone. We were assigned to either complete a default cas
         
         deactivate
 
+<br>
 
-
-## ENVIROMENTAL VARIABLES:
+## ENVIROMENTAL VARIABLES (in project):
 
 Install python-dotenv:
 
@@ -65,7 +64,25 @@ Add SECRET_KEY (OPTIONAL):
 
      SECRET_KEY = "{SECRET_KEY}"
 
- 
+
+<br>
+
+## INITIATE DATABASE (MIGRATIONS)
+
+1) Initialize Migrations: 
+
+        python manage.py db init
+
+2) Create Migration:
+
+        python manage.py db migrate
+
+
+3) Use Migration:
+
+        python manage.py upgrade
+
+ <br>
 
 ## MAILTRAP SETUP:
 
@@ -73,7 +90,7 @@ Add SECRET_KEY (OPTIONAL):
 2) create a new inbox
 3) enter in your own credentials into send_mail.py
 
-## INITIATE DATABASE (MIGRATIONS)
+
 
 <br>
 
